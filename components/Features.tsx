@@ -1,6 +1,6 @@
 'use client';
 import {getDictionary} from '@/get-dictionary';
-import {motion, useScroll, useTransform, useAnimation} from 'framer-motion';
+import {motion, useScroll, useTransform} from 'framer-motion';
 import {BarChart3, Bell, Globe, MapPin, Settings, Shield} from 'lucide-react';
 import React, {useRef} from 'react';
 

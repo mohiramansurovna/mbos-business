@@ -37,7 +37,7 @@ export default function Header({
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
-	}, [open]);
+	}, [open, handleMenu]);
 
 	React.useEffect(() => {
 		if (open) {

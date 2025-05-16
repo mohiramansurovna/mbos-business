@@ -13,7 +13,7 @@ import {
 import {Button} from './ui/button';
 import {Input} from './ui/input';
 import {Textarea} from './ui/textarea';
-import {motion, scale} from 'framer-motion';
+import {motion} from 'framer-motion';
 import {getDictionary} from '@/get-dictionary';
 export default function Contacts({
 	t
