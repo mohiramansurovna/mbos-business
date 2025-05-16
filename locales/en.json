@@ -1,0 +1,95 @@
+{
+	"header": {
+		"nav": {
+			"main": "Home",
+			"about": "About the Product",
+			"services": "Services",
+			"partnership": "Partnership",
+			"contact": "Contact"
+		},
+		"login": "Login"
+	},
+	"home": {
+		"firsth1": "Connect to MBOS Business",
+		"span": "for free",
+		"secondh1": "",
+		"h2": "Efficient and Easy Business Management",
+		"p": "Manage your services like barbershops, car washes, and gas stations quickly and efficiently with MBOS."
+	},
+	"services": {
+		"button": "Submit Application",
+		"section1": {
+			"h1": "Real-Time Queue Monitoring and Management",
+			"p": "Monitor and manage queues in real-time—eliminating the need for customers and staff to wait.",
+			"p2": "This enhances the productivity of your business operations and ensures effective management."
+		},
+		"section2": {
+			"h1": "Phone, Tablet, or TV—Flexible and Convenient System",
+			"p": "Access the queue system from any device—mobile apps, TV screens, tablets, or phones—all work seamlessly.",
+			"p2": "Regardless of the device used by you or your customers, your business operates smoothly."
+		},
+		"section3": {
+			"h1": "Automated Reports and Smart Analytics",
+			"p": "Know when more customers arrive, waiting times, and peak hours.",
+			"p2": "Everything is automatically tracked. You can make important business decisions through simple, understandable reports."
+		},
+		"section4": {
+			"h1": "System Fully Adapts to Your Business",
+			"p": "From barbershops to car wash services, from a single point to multiple branches—you can set queue times, rules, and appearance as desired.",
+			"p2": "At any stage of your business—current and future growth—the system operates reliably and manages queues effectively."
+		}
+	},
+	"features": {
+		"li1": {
+			"h1": "Multilingual Support",
+			"p": "Allow users to change the app interface to their preferred language."
+		},
+		"li2": {
+			"h1": "Real-Time Notifications",
+			"p": "Immediately notify customers and staff about queue changes."
+		},
+		"li3": {
+			"h1": "Customized Queue Times and Rules",
+			"p": "Set unique queue times and rules for each type of business."
+		},
+		"li4": {
+			"h1": "Role-Based Access Control",
+			"p": "Different access rights and permissions for staff, managers, and admins."
+		},
+		"li5": {
+			"h1": "Various Data Collection Methods",
+			"p": "Collect different types of information from customers to gain better insights."
+		},
+		"li6": {
+			"h1": "Location-Based Branch Finder",
+			"p": "Users can find all branches on the map and be directed to the nearest one."
+		}
+	},
+	"contacts": {
+		"h1": "Contact Us",
+		"name": "Your Name",
+		"phone": "Your Phone Number",
+		"message": "How can we assist you?",
+		"send": "Send"
+	},
+	"questions": {
+		"h1": "Frequently Asked Questions",
+		"q1": "How do the services work?",
+		"a1": "Our services are designed to help you manage your business efficiently. You can monitor and manage queues in real-time, and also manage your business more effectively through automated reports and smart analytics.",
+		"q2": "What are the pricing options for my services?",
+		"a2": "Our service prices vary depending on your business needs. You can contact us to learn about the best pricing options for your business.",
+		"q3": "What technical requirements are needed for my services?",
+		"a3": "To use our services, you need an internet connection and a compatible device. Our system works on various devices like phones, tablets, or TVs.",
+		"q4": "What support is available for my services?",
+		"a4": "We offer 24/7 support for our services. You can contact us for assistance with any questions or issues.",
+		"q5": "What security measures do you take for my services?",
+		"a5": "We implement several security measures to protect your data. We use modern technologies to encrypt and securely store your information.",
+		"q6": "What additional features are available for my services?",
+		"a6": "Our services offer a range of additional features tailored to your business needs. You can contact us to learn about the best options for your business."
+	},
+	"footer": {
+		"phone": "Support Center Phone:",
+		"license": "Services are licensed.",
+		"p": "License No. AA 0005816 for the operation and maintenance of data transmission networks was issued on April 8, 2016, by the Ministry for Development of Information Technologies and Communications of the Republic of Uzbekistan."
+	}
+}

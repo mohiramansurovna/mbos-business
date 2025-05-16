@@ -1,0 +1,13 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "object-curly-spacing": ["error", "never"], // Enforce {key:val}
+    "space-infix-ops": ["error", { "int32Hint": false }], // Remove 2 + 2 spacing (partially works)
+    "key-spacing": ["error", { "beforeColon": false, "afterColon": false }]
+  }
+}
