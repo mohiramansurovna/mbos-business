@@ -5,11 +5,13 @@ import Footer from '@/components/Footer';
 import {i18n, type Locale} from '@/i18n-config';
 import {getDictionary} from '@/get-dictionary';
 import {Inter} from 'next/font/google';
+
 const inter = Inter({
 	subsets: ['latin'],
 	weight: ['400', '500', '600', '700'],
 	variable: '--font-inter'
 });
+
 export const metadata: Metadata = {
 	title: 'MBOS',
 	description: 'MBOS - Raqamlashtirish orqali qulaylik yaratamiz',
@@ -22,7 +24,7 @@ export async function generateStaticParams() {
 	return i18n.locales.map((locale) => ({lang: locale}));
 }
 
-export default async function RootLayout({
+export default async function layout({
 	children,
 	params
 }: Readonly<{
@@ -32,7 +34,7 @@ export default async function RootLayout({
 	const {lang} = await params;
 	const t = await getDictionary(lang);
 	return (
-		<html lang={lang}>
+		<html lang={lang} className={`${inter.variable}`}>
 			<body className='text-white text-mm font-inter bg-black w-screen overflow-x-hidden'>
 				<Header t={t} />
 				{children}
