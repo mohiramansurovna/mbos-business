@@ -18,7 +18,7 @@ export default function Main({
 			className='flex flex-col items-center text-start justify-center min-h-96 pt-44 gap-6'
 		>
 			<BackgroundBeams />
-			<div className='w-full md:max-w-1/2 text-center flex flex-col items-center justify-center mt-8'>
+			<div className='w-full md:max-w-2/3 text-center flex flex-col items-center justify-center mt-8'>
 				<BoxReveal boxColor={'#166cc8'} duration={0.5}>
 					<p className='text-[2rem]/[2rem] md:text-[4rem]/[4rem] font-semibold mb-3'>
 						<span className='text-transparent'>.</span>

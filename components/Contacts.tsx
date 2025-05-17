@@ -107,8 +107,12 @@ export default function Contacts({
 			</section>
 			<MotionImage
 				className='rounded-full w-[300px] md:w-[400px]'
-				animate={{rotateX: [0, 5, 0], rotateZ: [10, -10, 10]}}
-				transition={{duration: 5, repeat: Infinity}}
+				animate={{
+					rotateX: [0, 20, 0],
+					rotateZ: [10, -10, 10],
+					rotateY: [-20, 0, -20]
+				}}
+				transition={{duration: 10, repeat: Infinity}}
 				src='/tech.jpg'
 				alt='tech'
 				width={400}

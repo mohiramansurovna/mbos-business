@@ -16,45 +16,45 @@ export default function Services({
 		target: containerRef,
 		offset: ['start end', 'end start']
 	});
-	const goUp = 75;
+	const goUp = 50;
 	const section1Opacity = useTransform(
 		scrollYProgress,
-		[0.0, 0.3, 0.35],
+		[0.0, 0.349, 0.35],
 		[1, 1, 0]
 	);
 	const section2Opacity = useTransform(
 		scrollYProgress,
-		[0.3, 0.35, 0.45, 0.5],
+		[0.349, 0.35, 0.499, 0.5],
 		[0, 1, 1, 0]
 	);
 	const section3Opacity = useTransform(
 		scrollYProgress,
-		[0.45, 0.5, 0.7, 0.72],
+		[0.499, 0.5, 0.719, 0.72],
 		[0, 1, 1, 0]
 	);
 	const section4Opacity = useTransform(
 		scrollYProgress,
-		[0.7, 0.72, 1],
+		[0.719, 0.72, 1],
 		[0, 1, 1]
 	);
 	const section1Y = useTransform(
 		scrollYProgress,
-		[0.0, 0.3, 0.35],
+		[0.0, 0.33, 0.35],
 		[0, 0, -goUp]
 	);
 	const section2Y = useTransform(
 		scrollYProgress,
-		[0.2, 0.25, 0.45, 0.5],
+		[0.33, 0.35, 0.47, 0.5],
 		[goUp, 0, 0, -goUp]
 	);
 	const section3Y = useTransform(
 		scrollYProgress,
-		[0.45, 0.5, 0.7, 0.72],
+		[0.47, 0.5, 0.71, 0.72],
 		[goUp, 0, 0, -goUp]
 	);
 	const section4Y = useTransform(
 		scrollYProgress,
-		[0.7, 0.72, 1],
+		[0.71, 0.72, 1],
 		[goUp, 0, 0]
 	);
 	const router = useRouter();
@@ -98,7 +98,7 @@ export default function Services({
 						<p>{t.services.section2.p2}</p>
 						<Button
 							onClick={() => router.push('#contact')}
-							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'
+							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8] z-10'
 						>
 							{t.services.button}
 						</Button>
@@ -123,7 +123,7 @@ export default function Services({
 						<p>{t.services.section3.p2}</p>
 						<Button
 							onClick={() => router.push('#contact')}
-							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'
+							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8] z-10'
 						>
 							{t.services.button}
 						</Button>
@@ -147,13 +147,13 @@ export default function Services({
 						<p>{t.services.section4.p2}</p>
 						<Button
 							onClick={() => router.push('#contact')}
-							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'
+							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8] z-10'
 						>
 							{t.services.button}
 						</Button>
 					</div>
 					<DotLottieReact
-						src='https://lottie.host/0781d380-5642-431f-bf2e-21ac133ffe14/IFTQuYUoCi.lottie'
+						src='https://lottie.host/4fbec6d5-c533-4ccf-8fed-6fe4c1b29c85/cXioqao7Ho.lottie'
 						loop
 						autoplay
 						className='w-full'
