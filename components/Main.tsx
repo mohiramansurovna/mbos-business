@@ -1,16 +1,17 @@
-'use client'
+'use client';
 import React from 'react';
 import {BoxReveal} from '@/components/magicui/box-reveal';
 import {Button} from '@/components/ui/button';
 import {BackgroundBeams} from '@/components/ui/background-beams';
 import Hamkorlar from './Hamkorlar';
 import {getDictionary} from '@/get-dictionary';
-
+import {useRouter} from 'next/navigation';
 export default function Main({
 	t
 }: {
 	t: Awaited<ReturnType<typeof getDictionary>>;
 }) {
+	const router = useRouter();
 	return (
 		<section
 			id='home'
@@ -36,16 +37,20 @@ export default function Main({
 					</h2>
 				</BoxReveal>
 				<BoxReveal boxColor={'#166cc8'} duration={0.5}>
-					<p className='mt-[.5rem] text-[1rem]/[1rem]'>
-						{t.home.p}
-					</p>
+					<p className='mt-[.5rem] text-[1rem]/[1rem]'>{t.home.p}</p>
 				</BoxReveal>
 
 				<BoxReveal boxColor={'#166cc8'} duration={0.5}>
-					<Button className='mt-[1.6rem] hover:bg-[#166cc8]/60 bg-[#166cc8]'>
+					<Button
+						onClick={() => router.push('#contact')}
+						className='mt-[1.6rem] hover:bg-[#166cc8]/60 bg-[#166cc8]'
+					>
 						{t.header.nav.contact}
 					</Button>
-					<Button className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'>
+					<Button
+						onClick={() => router.push('#services')}
+						className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'
+					>
 						{t.services.button}
 					</Button>
 				</BoxReveal>

@@ -1,9 +1,10 @@
-'use client'
+'use client';
 import {DotLottieReact} from '@lottiefiles/dotlottie-react';
 import {motion, useScroll, useTransform} from 'framer-motion';
 import {useRef} from 'react';
 import {Button} from './ui/button';
-import { getDictionary } from '@/get-dictionary';
+import {getDictionary} from '@/get-dictionary';
+import {useRouter} from 'next/navigation';
 
 export default function Services({
 	t
@@ -56,6 +57,7 @@ export default function Services({
 		[0.7, 0.72, 1],
 		[goUp, 0, 0]
 	);
+	const router = useRouter();
 	return (
 		<div ref={containerRef} id='services' className='relative h-[400vh]'>
 			<div className='sticky top-0 h-screen flex items-center justify-center text-white'>
@@ -69,7 +71,10 @@ export default function Services({
 						</h1>
 						<p className='mb-4'>{t.services.section1.p}</p>
 						<p>{t.services.section1.p2}</p>
-						<Button className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'>
+						<Button
+							onClick={() => router.push('#contact')}
+							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'
+						>
 							{t.services.button}
 						</Button>
 					</div>
@@ -91,7 +96,10 @@ export default function Services({
 						</h1>
 						<p className='mb-4'>{t.services.section2.p}</p>
 						<p>{t.services.section2.p2}</p>
-						<Button className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'>
+						<Button
+							onClick={() => router.push('#contact')}
+							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'
+						>
 							{t.services.button}
 						</Button>
 					</div>
@@ -113,7 +121,10 @@ export default function Services({
 						</h1>
 						<p className='mb-4'>{t.services.section3.p}</p>
 						<p>{t.services.section3.p2}</p>
-						<Button className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'>
+						<Button
+							onClick={() => router.push('#contact')}
+							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'
+						>
 							{t.services.button}
 						</Button>
 					</div>
@@ -134,7 +145,10 @@ export default function Services({
 						</h1>
 						<p className='mb-4'>{t.services.section4.p}</p>
 						<p>{t.services.section4.p2}</p>
-						<Button className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'>
+						<Button
+							onClick={() => router.push('#contact')}
+							className='mt-[1.6rem] mx-2 bg-[#166cc8]/10 border border-[#166cc8]'
+						>
 							{t.services.button}
 						</Button>
 					</div>

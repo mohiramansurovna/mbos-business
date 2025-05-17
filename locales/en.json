@@ -17,7 +17,7 @@
 		"p": "Manage your services like barbershops, car washes, and gas stations quickly and efficiently with MBOS."
 	},
 	"services": {
-		"button": "Submit Application",
+		"button": "Learn more",
 		"section1": {
 			"h1": "Real-Time Queue Monitoring and Management",
 			"p": "Monitor and manage queues in real-time—eliminating the need for customers and staff to wait.",

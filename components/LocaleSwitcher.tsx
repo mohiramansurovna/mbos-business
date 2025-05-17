@@ -22,7 +22,7 @@ export default function LocaleSwitcher() {
 	return (
 		<div>
 			<DropdownMenu>
-				<DropdownMenuTrigger className='flex items-center gap-1'>
+				<DropdownMenuTrigger className='flex items-center  gap-1'>
 					<Globe size={20} /> <ChevronDown size={15} />
 				</DropdownMenuTrigger>
 				<DropdownMenuContent className='p-0'>

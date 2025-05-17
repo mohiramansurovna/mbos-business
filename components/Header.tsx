@@ -93,7 +93,7 @@ export default function Header({
 						className='hidden md:block'
 					></Image>
 				</Link>
-				<nav className='flex flex-col text-[18px] font-light  items-center md:items-start md:flex-row gap-3'>
+				<nav className='flex flex-col text-[18px] font-light  items-center md:items-start md:flex-row gap-1 md:gap-3'>
 					<Link
 						onClick={handleMenu}
 						href='#home'
@@ -123,7 +123,7 @@ export default function Header({
 						{t.header.nav.partnership}
 					</Link>
 				</nav>
-				<div className='flex gap-4 md:flex-row flex-col  items-center'>
+				<div className='flex gap-4 md:flex-row flex-col items-center'>
 					<p className='flex items-center gap-2 text-[16px] font-light'>
 						<Phone size={17} />
 						62 227 7676
