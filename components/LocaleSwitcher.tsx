@@ -21,20 +21,28 @@ export default function LocaleSwitcher() {
 
 	return (
 		<div>
-		    <DropdownMenu >
-		        <DropdownMenuTrigger className='pt-2 flex items-center gap-1'>
-		            <Globe size={20}/> <ChevronDown size={15}/>
-		        </DropdownMenuTrigger>
-		        <DropdownMenuContent className='p-0'>
-		            {i18n.locales.map(locale => {
-		                return (
-		                    <DropdownMenuItem key={locale} className='p-0 w-full'>
-		                        <Link className='w-full h-full py-1 text-center uppercase' href={redirectedPathname(locale)}>{locale}</Link>
-		                    </DropdownMenuItem>
-		                );
-		            })}
-		        </DropdownMenuContent>
-		    </DropdownMenu>
+			<DropdownMenu>
+				<DropdownMenuTrigger className='flex items-center gap-1'>
+					<Globe size={20} /> <ChevronDown size={15} />
+				</DropdownMenuTrigger>
+				<DropdownMenuContent className='p-0'>
+					{i18n.locales.map((locale) => {
+						return (
+							<DropdownMenuItem
+								key={locale}
+								className='p-0 w-full'
+							>
+								<Link
+									className='w-full h-full py-1 text-center uppercase'
+									href={redirectedPathname(locale)}
+								>
+									{locale}
+								</Link>
+							</DropdownMenuItem>
+						);
+					})}
+				</DropdownMenuContent>
+			</DropdownMenu>
 		</div>
 	);
 }

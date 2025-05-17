@@ -65,13 +65,13 @@ const hamkorlar = [
 
 export default function Hamkorlar() {
 	return (
-        <div className='overflow-x-hidden w-full md:pl-20'>
-		<InfiniteMovingCards
-			items={hamkorlar}
-			direction='right'
-			speed='normal'
-			className='mt-12'
-            />
-        </div>
+		<div className='overflow-x-hidden w-full md:pl-20'>
+			<InfiniteMovingCards
+				items={hamkorlar}
+				direction='right'
+				speed='normal'
+				className='mt-10'
+			/>
+		</div>
 	);
 }

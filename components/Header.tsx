@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, {useCallback} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {Menu, Phone, X} from 'lucide-react';
@@ -13,7 +13,7 @@ export default function Header({
 }) {
 	const [open, setOpen] = React.useState<boolean>(false);
 	const navigationRef = React.useRef<HTMLDivElement>(null);
-	const handleMenu = () => {
+	const handleMenu = useCallback(() => {
 		if (open) {
 			navigationRef.current?.classList.remove('in-menu');
 			navigationRef.current?.classList.add('out-menu');
@@ -22,7 +22,7 @@ export default function Header({
 			navigationRef.current?.classList.remove('out-menu');
 		}
 		setOpen(!open);
-	};
+	}, [open]);
 	React.useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
 			if (
@@ -123,7 +123,7 @@ export default function Header({
 						{t.header.nav.partnership}
 					</Link>
 				</nav>
-				<div className='flex gap-4 md:flex-row flex-col items-center'>
+				<div className='flex gap-4 md:flex-row flex-col  items-center'>
 					<p className='flex items-center gap-2 text-[16px] font-light'>
 						<Phone size={17} />
 						62 227 7676
