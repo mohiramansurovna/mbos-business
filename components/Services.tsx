@@ -16,54 +16,54 @@ export default function Services({
 		target: containerRef,
 		offset: ['start end', 'end start']
 	});
-	const goUp = 50;
+	const goUp = 25;
 	const section1Opacity = useTransform(
 		scrollYProgress,
-		[0.0, 0.349, 0.35],
+		[0.0, 0.399, 0.4],
 		[1, 1, 0]
 	);
 	const section2Opacity = useTransform(
 		scrollYProgress,
-		[0.349, 0.35, 0.499, 0.5],
+		[0.399, 0.4, 0.499, 0.5],
 		[0, 1, 1, 0]
 	);
 	const section3Opacity = useTransform(
 		scrollYProgress,
-		[0.499, 0.5, 0.719, 0.72],
+		[0.499, 0.5, 0.569, 0.57],
 		[0, 1, 1, 0]
 	);
 	const section4Opacity = useTransform(
 		scrollYProgress,
-		[0.719, 0.72, 1],
+		[0.569, 0.57, 1],
 		[0, 1, 1]
 	);
 	const section1Y = useTransform(
 		scrollYProgress,
-		[0.0, 0.33, 0.35],
+		[0.0, 0.399, 0.4],
 		[0, 0, -goUp]
 	);
 	const section2Y = useTransform(
 		scrollYProgress,
-		[0.33, 0.35, 0.47, 0.5],
+		[0.399, 0.4, 0.499, 0.5],
 		[goUp, 0, 0, -goUp]
 	);
 	const section3Y = useTransform(
 		scrollYProgress,
-		[0.47, 0.5, 0.71, 0.72],
+		[0.499, 0.5, 0.569, 0.57],
 		[goUp, 0, 0, -goUp]
 	);
 	const section4Y = useTransform(
 		scrollYProgress,
-		[0.71, 0.72, 1],
+		[0.569, 0.57, 1],
 		[goUp, 0, 0]
 	);
 	const router = useRouter();
 	return (
-		<div ref={containerRef} id='services' className='relative h-[400vh]'>
+		<div ref={containerRef} id='services' className='relative h-[150vh]'>
 			<div className='sticky top-0 h-screen flex items-center justify-center text-white'>
 				<motion.div
 					style={{opacity: section1Opacity, y: section1Y}}
-					className='absolute flex md:flex-row flex-col justify-center gap-2 items-center w-full pt-20 md:pl-44 px-12'
+					className='absolute flex md:flex-row flex-col justify-center gap-2 items-center w-full pt-4 md:pl-44 px-12'
 				>
 					<div className='flex flex-col items-start gap-2'>
 						<h1 className='text-3xl md:text-5xl font-bold mb-4'>
@@ -88,7 +88,7 @@ export default function Services({
 
 				<motion.div
 					style={{opacity: section2Opacity, y: section2Y}}
-					className='absolute flex md:flex-row flex-col justify-center gap-2 items-center w-full pt-44 md:pt-20 md:pl-44 px-12'
+					className='absolute flex md:flex-row flex-col justify-center gap-2 items-center w-full pt-24 md:pt-20 md:pl-44 px-12'
 				>
 					<div className='flex flex-col items-start gap-2'>
 						<h1 className='text-3xl md:text-5xl font-bold mb-4'>
@@ -113,7 +113,7 @@ export default function Services({
 
 				<motion.div
 					style={{opacity: section3Opacity, y: section3Y}}
-					className='absolute flex md:flex-row flex-col justify-center gap-2 items-center w-full pt-44 md:pt-20 md:pl-44 px-12'
+					className='absolute flex md:flex-row flex-col justify-center gap-2 items-center w-full pt-24 md:pt-20 md:pl-44 px-12'
 				>
 					<div className='flex flex-col items-start gap-2'>
 						<h1 className='text-3xl md:text-5xl font-bold mb-4'>
@@ -137,7 +137,7 @@ export default function Services({
 				</motion.div>
 				<motion.div
 					style={{opacity: section4Opacity, y: section4Y}}
-					className='absolute flex md:flex-row flex-col justify-center gap-2 items-center w-full pt-44 md:pt-20 md:pl-44 px-12'
+					className='absolute flex md:flex-row flex-col justify-center gap-2 items-center w-full pt-28  md:pt-20 md:pl-44 px-12'
 				>
 					<div className='flex flex-col items-start gap-2'>
 						<h1 className='text-3xl md:text-5xl font-bold mb-4'>

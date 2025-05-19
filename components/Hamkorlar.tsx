@@ -65,7 +65,7 @@ const hamkorlar = [
 
 export default function Hamkorlar() {
 	return (
-		<div className='overflow-x-hidden w-full md:pl-20'>
+		<div className='overflow-x-hidden  mt-10 w-full flex justify-center'>
 			<InfiniteMovingCards
 				items={hamkorlar}
 				direction='right'

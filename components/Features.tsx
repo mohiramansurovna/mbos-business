@@ -67,10 +67,16 @@ export default function Features({
 				className='flex flex-col font-semibold text-xl gap-4 justify-center w-full pl-4 pr-20 md:pl-96 '
 			>
 				<li className='bg-black z-20 rounded-full p-3 md:p-6 flex items-center'>
-					<MotionGlobe
-						style={{color: color1, borderColor: color1}}
-						className='text-mbosColor bg-black z-20 border border-mbosColor rounded-full size-16 p-3 inline-block mr-3'
-					/>
+					<motion.div
+						style={{borderColor: color1}}
+						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
+					>
+						<MotionGlobe
+							size={25}
+							style={{color: color1}}
+							className='text-mbosColor bg-black z-20'
+						/>
+					</motion.div>
 
 					<div>
 						<h1>{t.features.li1.h1}</h1>
@@ -83,10 +89,16 @@ export default function Features({
 					</div>
 				</li>
 				<li className='bg-black z-20 rounded-full p-3 md:p-6 md:ml-8 flex items-center'>
-					<MotionBell
-						style={{color: color2, borderColor: color2}}
-						className='text-mbosColor bg-black z-20 border border-mbosColor rounded-full size-16 p-3 inline-block mr-3'
-					/>
+					<motion.div
+						style={{borderColor: color2}}
+						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
+					>
+						<MotionBell
+							size={25}
+							style={{color: color2}}
+							className='text-mbosColor bg-black z-20'
+						/>
+					</motion.div>
 					<div>
 						<h1>{t.features.li2.h1}</h1>
 						<motion.hr
@@ -99,10 +111,16 @@ export default function Features({
 					</div>
 				</li>
 				<li className='bg-black z-20 rounded-full p-3 md:p-6 md:ml-16 flex items-center'>
-					<MotionSettings
-						style={{color: color3, borderColor: color3}}
-						className='text-mbosColor bg-black z-20 border border-mbosColor rounded-full size-16 p-3 inline-block mr-3'
-					/>
+					<motion.div
+						style={{borderColor: color3}}
+						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
+					>
+						<MotionSettings
+							size={25}
+							style={{color: color3}}
+							className='text-mbosColor bg-black z-20'
+						/>
+					</motion.div>
 					<div>
 						<h1>{t.features.li3.h1}</h1>
 						<motion.hr
@@ -115,10 +133,16 @@ export default function Features({
 					</div>
 				</li>
 				<li className='bg-black z-20 rounded-full p-3 md:p-6 md:ml-16 flex items-center'>
-					<MotionShield
-						style={{color: color4, borderColor: color4}}
-						className='text-mbosColor bg-black z-20 border border-mbosColor rounded-full size-16 p-3 inline-block mr-3'
-					/>
+					<motion.div
+						style={{borderColor: color4}}
+						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
+					>
+						<MotionShield
+							size={25}
+							style={{color: color4}}
+							className='text-mbosColor bg-black z-20'
+						/>
+					</motion.div>
 					<div>
 						<h1>{t.features.li4.h1}</h1>
 						<motion.hr
@@ -131,10 +155,16 @@ export default function Features({
 					</div>
 				</li>
 				<li className='bg-black z-20 rounded-full p-3 md:p-6 md:ml-8 flex items-center'>
-					<MotionBarChart3
-						style={{color: color5, borderColor: color5}}
-						className='text-mbosColor bg-black z-20 border border-mbosColor rounded-full size-16 p-3 inline-block mr-3'
-					/>
+					<motion.div
+						style={{borderColor: color5}}
+						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
+					>
+						<MotionBarChart3
+							size={25}
+							style={{color: color5}}
+							className='text-mbosColor bg-black z-20'
+						/>
+					</motion.div>
 					<div>
 						<h1>{t.features.li5.h1}</h1>
 						<motion.hr
@@ -147,10 +177,16 @@ export default function Features({
 					</div>
 				</li>
 				<li className='bg-black z-20 rounded-full p-3 md:p-6 flex items-center'>
-					<MotionMapPin
-						style={{color: color6, borderColor: color6}}
-						className='text-mbosColor bg-black z-20 border border-mbosColor rounded-full size-16 p-3 inline-block mr-3'
-					/>
+					<motion.div
+						style={{borderColor: color6}}
+						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
+					>
+						<MotionMapPin
+							size={25}
+							style={{color: color6}}
+							className='text-mbosColor bg-black z-20'
+						/>
+					</motion.div>
 					<div>
 						<h1>{t.features.li6.h1}</h1>
 						<motion.hr

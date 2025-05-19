@@ -35,7 +35,7 @@ export default async function layout({
 	const t = await getDictionary(lang);
 	return (
 		<html lang={lang} className={`${inter.variable}`}>
-			<body className='text-white text-mm font-inter bg-black w-screen overflow-x-hidden'>
+			<body className='text-white m-0 p-0 text-mm font-inter bg-black w-screen overflow-x-hidden'>
 				<Header t={t} />
 				{children}
 				<Footer t={t} />
