@@ -1,13 +1,14 @@
 'use client';
+import dynamic from 'next/dynamic';
 import React from 'react';
 import Link from 'next/link';
 import {getDictionary} from '@/get-dictionary';
 import Image from 'next/image';
 import {FaInstagram, FaTelegram} from 'react-icons/fa6';
-import dynamic from 'next/dynamic';
 const Meteors = dynamic(() => import('@/components/ui/meteors'), {
 	ssr: false
 });
+
 export default function Footer({
 	t
 }: {
