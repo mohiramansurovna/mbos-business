@@ -39,32 +39,32 @@
 			"p2": "At any stage of your business—current and future growth—the system operates reliably and manages queues effectively."
 		}
 	},
-	"features": {
-		"li1": {
+	"features": [
+		{
 			"h1": "Multilingual Support",
 			"p": "Allow users to change the app interface to their preferred language."
 		},
-		"li2": {
+		{
 			"h1": "Real-Time Notifications",
 			"p": "Immediately notify customers and staff about queue changes."
 		},
-		"li3": {
+		{
 			"h1": "Customized Queue Times and Rules",
 			"p": "Set unique queue times and rules for each type of business."
 		},
-		"li4": {
+		{
 			"h1": "Role-Based Access Control",
 			"p": "Different access rights and permissions for staff, managers, and admins."
 		},
-		"li5": {
+		{
 			"h1": "Various Data Collection Methods",
 			"p": "Collect different types of information from customers to gain better insights."
 		},
-		"li6": {
+		{
 			"h1": "Location-Based Branch Finder",
 			"p": "Users can find all branches on the map and be directed to the nearest one."
 		}
-	},
+	],
 	"contacts": {
 		"h1": "Contact Us",
 		"name": "Your Name",

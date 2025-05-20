@@ -39,32 +39,32 @@
 			"p2": "Biznesingiz har qanday bosqichida — hozirgi va kelajakdagi o‘sishda — tizim barqaror ishlaydi va navbatlarni ishonchli boshqaradi."
 		}
 	},
-	"features": {
-		"li1": {
+	"features": [
+		{
 			"h1": "Ko'p tilli qo'llab-quvvatlash",
 			"p": "Foydalanuvchilarga ilova interfeysini o'zlariga qulay tilga o'zgartirish imkonini bering."
 		},
-		"li2": {
+		{
 			"h1": "Real vaqtli bildirishnomalar",
 			"p": "Navbatdagi o'zgarishlardan mijozlar va xodimlarni darhol xabardor qiling."
 		},
-		"li3": {
+		{
 			"h1": "Moslashtirilgan navbat vaqtlari va qoidalari",
 			"p": "Har bir biznes turi uchun noyob navbat vaqtlari va qoidalari belgilang."
 		},
-		"li4": {
+		{
 			"h1": "Rolga asoslangan kirish boshqaruvi",
 			"p": "Xodimlar, menejerlar va adminlar uchun turli kirish huquqlari va ruxsatnomalar."
 		},
-		"li5": {
+		{
 			"h1": "Turli ma'lumotlar to'plash turlari",
 			"p": "Mijozlardan turli xil ma'lumotlarni yig'ib, yaxshiroq tahlillar oling."
 		},
-		"li6": {
+		{
 			"h1": "Joylashuvga asoslangan filial topish",
 			"p": "Foydalanuvchilar xaritada barcha filiallarni topishi va ularga eng yaqin bo‘lganiga yo‘naltirilishi mumkin."
 		}
-	},
+	],
 	"contacts": {
 		"h1": "Biz bilan bog'laning",
 		"name": "Ismingiz",

@@ -1,6 +1,6 @@
 'use client';
 import {getDictionary} from '@/get-dictionary';
-import {motion, useScroll, useTransform} from 'framer-motion';
+import {motion, MotionStyle, useScroll, useTransform} from 'framer-motion';
 import {BarChart3, Bell, Globe, MapPin, Settings, Shield} from 'lucide-react';
 import React, {useRef} from 'react';
 
@@ -20,42 +20,105 @@ export default function Features({
 		target: targetRef,
 		offset: ['start end', 'end start']
 	});
-	const color1 = useTransform(
-		scrollYProgress,
-		[0.2, 0.3],
-		['#166cc8', '#7B1FA2']
-	);
-	const color2 = useTransform(
-		scrollYProgress,
-		[0.3, 0.4],
-		['#166cc8', '#7B1FA2']
-	);
-	const color3 = useTransform(
-		scrollYProgress,
-		[0.4, 0.5],
-		['#166cc8', '#7B1FA2']
-	);
-	const color4 = useTransform(
-		scrollYProgress,
-		[0.5, 0.6],
-		['#166cc8', '#7B1FA2']
-	);
-	const color5 = useTransform(
-		scrollYProgress,
-		[0.6, 0.7],
-		['#166cc8', '#7B1FA2']
-	);
-	const color6 = useTransform(
-		scrollYProgress,
-		[0.7, 0.8],
-		['#166cc8', '#7B1FA2']
-	);
-	const color1Hr = useTransform(scrollYProgress, [0.2, 0.3], ['0%', '100%']);
-	const color2Hr = useTransform(scrollYProgress, [0.3, 0.4], ['0%', '100%']);
-	const color3Hr = useTransform(scrollYProgress, [0.4, 0.5], ['0%', '100%']);
-	const color4Hr = useTransform(scrollYProgress, [0.5, 0.6], ['0%', '100%']);
-	const color5Hr = useTransform(scrollYProgress, [0.6, 0.7], ['0%', '100%']);
-	const color6Hr = useTransform(scrollYProgress, [0.7, 0.8], ['0%', '100%']);
+	const all = [
+		{
+			color: useTransform(
+				scrollYProgress,
+				[0.2, 0.3],
+				['#166cc8', '#7B1FA2']
+			),
+			hrColor: useTransform(scrollYProgress, [0.2, 0.3], ['0%', '100%']),
+			icon: (style: MotionStyle) => (
+				<MotionGlobe
+					size={25}
+					style={style}
+					className='text-mbosColor bg-black z-20'
+				/>
+			),
+			ml: ''
+		},
+		{
+			color: useTransform(
+				scrollYProgress,
+				[0.3, 0.4],
+				['#166cc8', '#7B1FA2']
+			),
+			hrColor: useTransform(scrollYProgress, [0.3, 0.4], ['0%', '100%']),
+			icon: (style: MotionStyle) => (
+				<MotionBell
+					size={25}
+					style={style}
+					className='text-mbosColor bg-black z-20'
+				/>
+			),
+			ml: 'md:ml-8'
+		},
+		{
+			color: useTransform(
+				scrollYProgress,
+				[0.4, 0.5],
+				['#166cc8', '#7B1FA2']
+			),
+			hrColor: useTransform(scrollYProgress, [0.4, 0.5], ['0%', '100%']),
+			icon: (style: MotionStyle) => (
+				<MotionSettings
+					size={25}
+					style={style}
+					className='text-mbosColor bg-black z-20'
+				/>
+			),
+			ml: 'md:ml-16'
+		},
+		{
+			color: useTransform(
+				scrollYProgress,
+				[0.5, 0.6],
+				['#166cc8', '#7B1FA2']
+			),
+			hrColor: useTransform(scrollYProgress, [0.5, 0.6], ['0%', '100%']),
+			icon: (style: MotionStyle) => (
+				<MotionShield
+					size={25}
+					style={style}
+					className='text-mbosColor bg-black z-20'
+				/>
+			),
+			ml: 'md:ml-16'
+		},
+		{
+			color: useTransform(
+				scrollYProgress,
+				[0.6, 0.7],
+				['#166cc8', '#7B1FA2']
+			),
+			hrColor: useTransform(scrollYProgress, [0.6, 0.7], ['0%', '100%']),
+			icon: (style: MotionStyle) => (
+				<MotionBarChart3
+					size={25}
+					style={style}
+					className='text-mbosColor bg-black z-20'
+				/>
+			),
+			ml: 'md:ml-8'
+		},
+		{
+			color: useTransform(
+				scrollYProgress,
+				[0.7, 0.8],
+				['#166cc8', '#7B1FA2']
+			),
+			hrColor: useTransform(scrollYProgress, [0.7, 0.8], ['0%', '100%']),
+			icon: (style: MotionStyle) => (
+				<MotionMapPin
+					size={25}
+					style={style}
+					className='text-mbosColor bg-black z-20'
+				/>
+			),
+			ml: ''
+		}
+	];
+
 	return (
 		<section id='features'>
 			<div className='absolute'>
@@ -66,138 +129,36 @@ export default function Features({
 				ref={targetRef}
 				className='flex flex-col font-semibold text-xl gap-4 justify-center w-full pl-4 pr-20 md:pl-96 '
 			>
-				<li className='bg-black z-20 rounded-full p-3 md:p-6 flex items-center'>
-					<motion.div
-						style={{borderColor: color1}}
-						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
-					>
-						<MotionGlobe
-							size={25}
-							style={{color: color1}}
-							className='text-mbosColor bg-black z-20'
-						/>
-					</motion.div>
-
-					<div>
-						<h1>{t.features.li1.h1}</h1>
-						<motion.hr
-							style={{borderColor: '#7b1fa2', width: color1Hr}}
-						/>
-						<p className='text-gray-400 font-light text-mm'>
-							{t.features.li1.p}
-						</p>
-					</div>
-				</li>
-				<li className='bg-black z-20 rounded-full p-3 md:p-6 md:ml-8 flex items-center'>
-					<motion.div
-						style={{borderColor: color2}}
-						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
-					>
-						<MotionBell
-							size={25}
-							style={{color: color2}}
-							className='text-mbosColor bg-black z-20'
-						/>
-					</motion.div>
-					<div>
-						<h1>{t.features.li2.h1}</h1>
-						<motion.hr
-							style={{borderColor: '#7b1fa2', width: color2Hr}}
-						/>
-
-						<p className='text-gray-400 font-light text-mm'>
-							{t.features.li2.p}
-						</p>
-					</div>
-				</li>
-				<li className='bg-black z-20 rounded-full p-3 md:p-6 md:ml-16 flex items-center'>
-					<motion.div
-						style={{borderColor: color3}}
-						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
-					>
-						<MotionSettings
-							size={25}
-							style={{color: color3}}
-							className='text-mbosColor bg-black z-20'
-						/>
-					</motion.div>
-					<div>
-						<h1>{t.features.li3.h1}</h1>
-						<motion.hr
-							style={{borderColor: '#7b1fa2', width: color3Hr}}
-						/>
-
-						<p className='text-gray-400 font-light text-mm'>
-							{t.features.li3.p}
-						</p>
-					</div>
-				</li>
-				<li className='bg-black z-20 rounded-full p-3 md:p-6 md:ml-16 flex items-center'>
-					<motion.div
-						style={{borderColor: color4}}
-						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
-					>
-						<MotionShield
-							size={25}
-							style={{color: color4}}
-							className='text-mbosColor bg-black z-20'
-						/>
-					</motion.div>
-					<div>
-						<h1>{t.features.li4.h1}</h1>
-						<motion.hr
-							style={{borderColor: '#7b1fa2', width: color4Hr}}
-						/>
-
-						<p className='text-gray-400 font-light text-mm'>
-							{t.features.li4.p}
-						</p>
-					</div>
-				</li>
-				<li className='bg-black z-20 rounded-full p-3 md:p-6 md:ml-8 flex items-center'>
-					<motion.div
-						style={{borderColor: color5}}
-						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
-					>
-						<MotionBarChart3
-							size={25}
-							style={{color: color5}}
-							className='text-mbosColor bg-black z-20'
-						/>
-					</motion.div>
-					<div>
-						<h1>{t.features.li5.h1}</h1>
-						<motion.hr
-							style={{borderColor: '#7b1fa2', width: color5Hr}}
-						/>
-
-						<p className='text-gray-400 font-light text-mm'>
-							{t.features.li5.p}
-						</p>
-					</div>
-				</li>
-				<li className='bg-black z-20 rounded-full p-3 md:p-6 flex items-center'>
-					<motion.div
-						style={{borderColor: color6}}
-						className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-16 mr-3'
-					>
-						<MotionMapPin
-							size={25}
-							style={{color: color6}}
-							className='text-mbosColor bg-black z-20'
-						/>
-					</motion.div>
-					<div>
-						<h1>{t.features.li6.h1}</h1>
-						<motion.hr
-							style={{borderColor: '#7b1fa2', width: color6Hr}}
-						/>
-
-						<p className='text-gray-400 font-light text-mm'>
-							{t.features.li6.p}
-						</p>
-					</div>
-				</li>
+				{all.map((each, index) => {
+					return (
+						<li
+							key={index}
+							className={
+								'bg-black z-20 rounded-full p-1 md:p-6 flex md:items-center ' +
+								each.ml
+							}
+						>
+							<motion.div
+								style={{borderColor: each.color}}
+								className='border bg-black z-20 border-mbosColor rounded-full aspect-square flex items-center justify-center size-12 md:size-16 mr-3'
+							>
+								{each.icon({color: each.color})}
+							</motion.div>
+							<div>
+								<h1>{t.features[index].h1}</h1>
+								<motion.hr
+									style={{
+										borderColor: '#7b1fa2',
+										width: each.hrColor
+									}}
+								/>
+								<p className='text-gray-400 font-light text-mm'>
+									{t.features[index].p}
+								</p>
+							</div>
+						</li>
+					);
+				})}
 			</ul>
 		</section>
 	);

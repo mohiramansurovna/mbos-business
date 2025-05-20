@@ -37,7 +37,7 @@ export default function Contacts({
 				<Form {...form}>
 					<form
 						onSubmit={form.handleSubmit(onSubmit)}
-						className='w-full px-12 space-y-6'
+						className='w-full px-4 md:px-12 space-y-6'
 					>
 						<FormField
 							control={form.control}

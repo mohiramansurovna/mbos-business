@@ -25,7 +25,7 @@ export default function LocaleSwitcher() {
 				<DropdownMenuTrigger className='flex items-center  gap-1'>
 					<Globe size={20} /> <ChevronDown size={15} />
 				</DropdownMenuTrigger>
-				<DropdownMenuContent className='p-0'>
+				<DropdownMenuContent className='p-0 z-80'>
 					{i18n.locales.map((locale) => {
 						return (
 							<DropdownMenuItem

@@ -186,7 +186,17 @@
 		left: -200px;
 	}
 } */
-@import "tailwindcss";
+
+@theme inline {
+	--animate-scroll: scroll 40s forwards linear infinite;
+
+	@keyframes scroll {
+		to {
+			transform: translate(calc(-50% - 0.5rem));
+		}
+	}
+}
+
 @theme inline {
   --animate-meteor-effect: meteor 5s linear infinite;
 

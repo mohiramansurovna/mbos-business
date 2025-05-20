@@ -82,7 +82,7 @@ export default function Header({
 				className={`transition-all duration-300
                     ${open ? 'right-0 opacity-100' : '-right-3/5 opacity-0'}
                     md:right-0 md:opacity-100 
-                    fixed z-50 w-3/5 md:w-full bg-black/30 md:bg-black/20 text-lg md:text-mm  backdrop-blur-xl md:backdrop-blur-sm flex flex-col md:flex-row justify-start pt-20 md:pt-0 md:justify-around items-center h-screen md:h-25 overflow-hidden text-white`}
+                    fixed z-50 w-full bg-black/30 md:bg-black/20 text-lg md:text-mm  backdrop-blur-xl md:backdrop-blur-sm flex flex-col md:flex-row justify-between py-10 md:py-0 pt-20 md:pt-0 md:justify-around items-center h-screen md:h-25 overflow-hidden text-white`}
 			>
 				<Link onClick={handleMenu} href='#home'>
 					<Image
@@ -93,7 +93,7 @@ export default function Header({
 						className='hidden md:block'
 					></Image>
 				</Link>
-				<nav className='flex flex-col text-[18px] font-light items-start md:flex-row gap-1 md:gap-3'>
+				<nav className='flex flex-col md:text-[18px] text-[22px] font-light items-start md:flex-row gap-1 md:gap-3'>
 					<Link
 						onClick={handleMenu}
 						href='#home'
@@ -123,7 +123,7 @@ export default function Header({
 						{t.header.nav.partnership}
 					</Link>
 				</nav>
-				<div className='flex gap-4 md:flex-row flex-col items-center'>
+				<div className='flex gap-4 md:flex-row flex-col md:items-center'>
 					<p className='flex items-center gap-2 text-[16px] font-light'>
 						<Phone size={17} />
 						62 227 7676
