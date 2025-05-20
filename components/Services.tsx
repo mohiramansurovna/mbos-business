@@ -1,8 +1,8 @@
 'use client';
 import {DotLottieReact} from '@lottiefiles/dotlottie-react';
-import {motion, useScroll} from 'framer-motion';
-import {useAnimation} from 'motion/react';
-import {useRef, useEffect} from 'react';
+import {motion} from 'framer-motion';
+// import {useAnimation} from 'motion/react';
+import {useRef} from 'react';
 import {Button} from './ui/button';
 import {getDictionary} from '@/get-dictionary';
 import {useRouter} from 'next/navigation';
@@ -40,58 +40,58 @@ export default function Services({
 	];
 	const router = useRouter();
 	const containerRef = useRef(null);
-	const {scrollYProgress} = useScroll({
-		target: containerRef,
-		offset: ['start end', 'end start']
-	});
-
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	const control = [
-		useAnimation(),
-		useAnimation(),
-		useAnimation(),
-		useAnimation()
-	];
-	const variants = {
-		hidden: {
-			opacity: 0,
-			scale: 0.8
-		},
-		visible: {
-			opacity: 1,
-			scale: 1
-		}
-	};
-
-	useEffect(() => {
-		const scrolling = () => {
-			const scroll = scrollYProgress.get();
-
-			if (scroll <= 0.43) {
-				control[0].start('visible');
-				control[1].start('hidden');
-				control[2].start('hidden');
-				control[3].start('hidden');
-			} else if (scroll > 0.43 && scroll <= 0.48) {
-				control[0].start('hidden');
-				control[1].start('visible');
-				control[2].start('hidden');
-				control[3].start('hidden');
-			} else if (scroll > 0.48 && scroll <= 0.58) {
-				control[0].start('hidden');
-				control[1].start('hidden');
-				control[2].start('visible');
-				control[3].start('hidden');
-			} else if (scroll > 0.58) {
-				control[0].start('hidden');
-				control[1].start('hidden');
-				control[2].start('hidden');
-				control[3].start('visible');
-			}
-		};
-		window.addEventListener('scroll', scrolling);
-		return () => window.removeEventListener('scroll', scrolling);
-	}, [control, scrollYProgress]);
+	// const {scrollYProgress} = useScroll({
+	// 	target: containerRef,
+	// 	offset: ['start end', 'end start']
+	// });
+	//
+	// // eslint-disable-next-line react-hooks/exhaustive-deps
+	// const control = [
+	// 	useAnimation(),
+	// 	useAnimation(),
+	// 	useAnimation(),
+	// 	useAnimation()
+	// ];
+	// const variants = {
+	// 	hidden: {
+	// 		opacity: 0,
+	// 		scale: 0.8
+	// 	},
+	// 	visible: {
+	// 		opacity: 1,
+	// 		scale: 1
+	// 	}
+	// };
+	//
+	// useEffect(() => {
+	// 	const scrolling = () => {
+	// 		const scroll = scrollYProgress.get();
+	//
+	// 		if (scroll <= 0.43) {
+	// 			control[0].start('visible');
+	// 			control[1].start('hidden');
+	// 			control[2].start('hidden');
+	// 			control[3].start('hidden');
+	// 		} else if (scroll > 0.43 && scroll <= 0.48) {
+	// 			control[0].start('hidden');
+	// 			control[1].start('visible');
+	// 			control[2].start('hidden');
+	// 			control[3].start('hidden');
+	// 		} else if (scroll > 0.48 && scroll <= 0.58) {
+	// 			control[0].start('hidden');
+	// 			control[1].start('hidden');
+	// 			control[2].start('visible');
+	// 			control[3].start('hidden');
+	// 		} else if (scroll > 0.58) {
+	// 			control[0].start('hidden');
+	// 			control[1].start('hidden');
+	// 			control[2].start('hidden');
+	// 			control[3].start('visible');
+	// 		}
+	// 	};
+	// 	window.addEventListener('scroll', scrolling);
+	// 	return () => window.removeEventListener('scroll', scrolling);
+	// }, [control, scrollYProgress]);
 
 	return (
 		<div ref={containerRef} id='services' className='relative '>
